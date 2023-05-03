@@ -1,0 +1,10 @@
+stages:
+  - build
+
+send-jira:
+  image: 'golang:1.19'
+  stage: build
+  script:
+    - go run main.go
+  allow_failure: true
+  timeout: 5 minutes
